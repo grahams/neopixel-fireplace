@@ -44,20 +44,20 @@ int toggleLights(String setting)
 
 void setup()
 {
-  Particle.function("toggleLights", toggleLights);
+    Particle.function("toggleLights", toggleLights);
 
-  strip.begin();
-  strip.show(); // Initialize all pixels to 'off'
+    strip.begin();
+    strip.show(); // Initialize all pixels to 'off'
 }
 
 void loop()
 {
-  if(runLoop) {
-    fireplace(20);
-  }
-  else {
-    colorWipe(strip.Color(0, 0, 0), 0);
-  }
+    if(runLoop) {
+        fireplace(20);
+    }
+    else {
+        colorWipe(strip.Color(0, 0, 0), 0);
+    }
 }
 
 void fireplace(uint8_t wait)
@@ -74,9 +74,9 @@ void fireplace(uint8_t wait)
 // Fill the dots one after the other with a color
 void colorWipe(uint32_t c, uint8_t wait)
 {
-  for(uint16_t i=0; i<strip.numPixels(); i++) {
-    strip.setPixelColor(i, c);
-    strip.show();
-    delay(wait);
-  }
+    for(uint16_t i=0; i<strip.numPixels(); i++) {
+        strip.setPixelColor(i, c);
+        strip.show();
+        delay(wait);
+    }
 }
