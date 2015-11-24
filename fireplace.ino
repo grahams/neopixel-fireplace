@@ -16,16 +16,17 @@ SYSTEM_MODE(AUTOMATIC);
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, PIXEL_TYPE);
 
-uint32_t Black = strip.Color(0, 0, 0);
-uint32_t Maroon = strip.Color(128, 0, 0);
-uint32_t Red = strip.Color(255, 0, 0);
-uint32_t DarkRed = strip.Color(139, 0, 0);
-uint32_t Orange = strip.Color(255, 165, 0);
-uint32_t DarkOrange = strip.Color(255, 140, 0);
-uint32_t Gold = strip.Color(255, 215, 0);
-uint32_t Yellow = strip.Color(255, 255, 0);
+uint32_t palette[8] = {
+    strip.Color(0, 0, 0), // Black
+    strip.Color(128, 0, 0), // Maroon
+    strip.Color(255, 0, 0), // Red
+    strip.Color(139, 0, 0), // DarkRed
+    strip.Color(255, 165, 0), // Orange
+    strip.Color(255, 140, 0), // DarkOrange
+    strip.Color(255, 215, 0), // Gold
+    strip.Color(255, 255, 0) // Yellow
+};
 
-uint32_t palette[8] = { Black, Maroon, Red, DarkRed, Orange, DarkOrange, Gold, Yellow };
 
 // used to 'turn off' the LEDs
 bool runLoop = true;
