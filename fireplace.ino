@@ -30,6 +30,8 @@ uint32_t palette[8] = { Black, Maroon, Red, DarkRed, Orange, DarkOrange, Gold, Y
 // used to 'turn off' the LEDs
 bool runLoop = true;
 
+int defaultBrightness = 50;
+
 uint32_t leds[PIXEL_COUNT];
 
 int toggleLights(String setting)
@@ -42,10 +44,19 @@ int toggleLights(String setting)
     }
 }
 
+int setBrightness(String brightness)
+{
+    int b = atoi(brightness);
+
+    strip.setBrightness(b);
+}
+
 void setup()
 {
+    Particle.function("brightness", setBrightness);
     Particle.function("toggleLights", toggleLights);
 
+    strip.setBrightness(defaultBrightness);
     strip.begin();
     strip.show(); // Initialize all pixels to 'off'
 }
