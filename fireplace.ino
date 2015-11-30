@@ -31,7 +31,7 @@ uint32_t palette[8] = {
 // used to 'turn off' the LEDs
 bool runLoop = true;
 
-int defaultBrightness = 50;
+int defaultBrightness = 255;
 
 uint32_t leds[PIXEL_COUNT];
 
