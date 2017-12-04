@@ -1,6 +1,6 @@
 # Neopixel/Particle "Fireplace"
 
-This code, intended to run on a [Particle Photon](http://particle.io/) will create a flickering fireplace effect on an [Adafruit NeoPixel strip](https://www.adafruit.com/products/1138).  It was slapped together, and doesn’t have terribly good error checking.  One can only spend so much time on office Christmas decorations.
+This code, intended to run on a [Particle Photon](https://store.particle.io/products/photon) will create a flickering fireplace effect on an [Adafruit NeoPixel strip](https://www.adafruit.com/products/1138).  It was slapped together, and doesn’t have terribly good error checking.  One can only spend so much time on office Christmas decorations.
 
 You can see the ‘fireplace’ in operation [here](https://www.youtube.com/watch?v=5lLuh-md73E).
 
